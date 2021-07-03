@@ -1,0 +1,8 @@
+{% include 'partials/header.html' %}
+    <ul>
+        <!-- Redirect to each note being created-->
+        {% for note in notes %}
+        <li> <button name="DeleteButton" value="{{ note.id }}">Delete</button> <a href ="/notes/details/{{note.id}}">{{note.title}}</a>: {{note.text}}</li> 
+        {% endfor %}
+    </ul>
+{% include 'partials/footer.html' %}
